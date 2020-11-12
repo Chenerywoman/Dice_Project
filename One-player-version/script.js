@@ -40,8 +40,6 @@ roll.addEventListener("click", () => {
         case 6: die.style.transform = "rotate(90deg)"
     }
 
-    document.getElementsByClassName("box buttons")[0].style.marginTop = "10%";
-
     die.src = `../img/dice${go}.png`
     die.style.display = "block";
     die.style.visibility = "visible";

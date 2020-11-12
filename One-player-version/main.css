@@ -1,11 +1,9 @@
-body {
-    background-color: #EAE2B7;
+* {
+    box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-    color: #3e3f85;
-    margin: 0;
+body {
+    background-color: #EAE2B7;
 }
 
 .container {
@@ -15,13 +13,21 @@ h1 {
 }
 
 .box{
-    margin: 2%;
+    border: 1px solid black;
+}
+
+.heading {
+    font-weight: bold;
 }
 
 .instructions {
-    font-size: 150%;
+    font-size: 250%;
     color: #3e3f85;
     text-align: center;
+}
+
+.box.buttons{
+    margin-top: 10%;
 }
 
 .button {
@@ -40,6 +46,7 @@ h1 {
 #roll {
     font-size: 50px;
     background-color: #D62828;
+    color:#3e3f85;
 }
 
 #roll:active {
@@ -49,7 +56,6 @@ h1 {
 
 #die {
     visibility: hidden;
-    filter: hue-rotate(80deg);
 }
 
 #replay{
@@ -63,5 +69,53 @@ h1 {
     background-color: white;
 }
 
-/*rotate dice*/
-/*change dice colours*/
+@media only screen and (max-width: 768px){
+
+    .instructions {
+        font-size: 175%;
+    }
+
+    #die {
+        width: 85%;
+        height: 85%;
+    }
+
+    .box.buttons{
+        margin-top: 7%;
+    }
+
+    #roll {
+        font-size: 35px;
+    }
+
+    #replay{
+        font-size: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+
+    .instructions {
+        font-size: 150%;
+
+    }
+
+    #die {
+        width: 80%;
+        height: 80%;
+    }
+
+    .box.buttons{
+        margin-top: 25%;
+    }
+
+    #roll {
+        font-size: 25px;
+    }
+
+    #replay{
+        font-size: 25px;
+    }
+
+}
