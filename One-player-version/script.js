@@ -2,35 +2,68 @@ function randomNumber () {
     return Math.ceil(Math.random() * 6)
 };
 
+// let die =  document.getElementById("die")
+// const roll  = document.getElementById("roll");
+// const replay = document.getElementById("replay");
+
 let totalScore = 0;
-const roll  = document.getElementById("roll");
 
 roll.addEventListener("click", () => {
 
     let go =  randomNumber();
 
-    document.getElementById("die").src = `../img/dice${go}.png`
-    document.getElementById("die").style.display = "block";
-    document.getElementById("die").style.visibility = "visible";
+    switch(go){
+        case 1: die.style.filter = "hue-rotate(90deg)";
+        break; 
+        case 2: die.style.filter = "hue-rotate(180deg)";
+        break;
+        case 3: die.style.filter = "hue-rotate(270deg)";
+        break;
+        case 4: die.style.filter = "hue-rotate(360deg)";
+        break;
+        case 5: die.style.filter = "hue-rotate(150deg)";
+        break;
+        case 6: die.style.filter = "hue-rotate(300deg)"
+    }
+
+    switch(go){
+        case 1: die.style.transform = "rotate(15deg)";
+        break; 
+        case 2: die.style.transform = "rotate(30deg)";
+        break;
+        case 3: die.style.transform = "rotate(45deg)";
+        break;
+        case 4: die.style.transform = "rotate(60deg)";
+        break;
+        case 5: die.style.transform = "rotate(75deg)";
+        break;
+        case 6: die.style.transform = "rotate(90deg)"
+    }
+
+    document.getElementsByClassName("box buttons")[0].style.marginTop = "10%";
+
+    die.src = `../img/dice${go}.png`
+    die.style.display = "block";
+    die.style.visibility = "visible";
 
     totalScore = totalScore + go;
-    document.getElementById("score").textContent = totalScore;
+    score.textContent = totalScore;
 
     if (go == 1){
 
-        document.getElementById("message").textContent = "Rolled 1. You lose!";
-        document.getElementById("roll").style.display  = "none";
-        document.getElementById("replay").style.display = "inline";
+        message.textContent = "Rolled 1. You lose!";
+        roll.style.display  = "none";
+        replay.style.display = "inline";
     
     } else if (totalScore >= 20) {
 
-        document.getElementById("message").textContent = "You win!";
-        document.getElementById("roll").style.display  = "none";
-        document.getElementById("replay").style.display = "inline";
+        message.textContent = "You win!";
+        roll.style.display  = "none";
+        replay.style.display = "inline";
     
     } else {
     
-        document.getElementById("message").textContent = "Roll again";
+        message.textContent = "Roll again";
 
     }
 })
@@ -38,11 +71,11 @@ roll.addEventListener("click", () => {
 replay.addEventListener("click", () =>{
     
     totalScore = 0;
-    document.getElementById("score").innerHTML = `${totalScore}`
-    document.getElementById("roll").style.display = "inline";
-    document.getElementById("message").innerHTML = "Roll the die to play."
-    document.getElementById("die").style.visibility = "hidden";
-    document.getElementById("replay").style.display = "none";
+    score.innerHTML = `${totalScore}`
+    roll.style.display = "inline";
+    message.innerHTML = "Roll the die to play."
+    die.style.visibility = "hidden";
+    replay.style.display = "none";
 
 })
 
