@@ -13,16 +13,14 @@ let randomNumber = () => {
 
 }
 
-new_game.style.borderRadius = "10%";
-
 new_game.addEventListener("click", () => {
 
     roll.style.display = "inline";
     hold.style.display = "inline";
-    roll.style.borderRadius = "10%";
-    hold.style.borderRadius = "10%";
     new_game.style.display = "none";
     die.style.visibility = "hidden";
+    die.style.display = "block";
+    document.getElementsByClassName("die")[0].querySelector("p").style.display = "block";
 
     totalPlayerOne = 0;
     document.getElementById("player1_score").innerHTML = totalPlayerOne;
@@ -44,6 +42,8 @@ roll.addEventListener("click", () => {
     console.log(`player ${currentPlayer} is playing`)
     die.src = `../img/dice${go}.png`
     die.style.visibility = "visible";
+
+    document.getElementsByClassName("die")[0].querySelector("p").style.display= "none";
 
     switch(go){
         case 1: die.style.filter = "hue-rotate(90deg)";
@@ -109,7 +109,6 @@ roll.addEventListener("click", () => {
         if (go == 1){
             document.getElementById("player1").querySelector(".winner").style.display = "inline";
             document.getElementById("player1").querySelector(".holding").style.display = "none";
-            winner_message.style.visibility = "visible";
             roll.style.display = "none";
             hold.style.display = "none";
             new_game.style.display = "inline";
@@ -138,7 +137,6 @@ hold.addEventListener("click", () => {
         document.getElementById("player2").querySelector(".holding").style.display = "inline";
         currentPlayer = 1;
     };
-
 
 })
 

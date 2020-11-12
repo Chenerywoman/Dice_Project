@@ -16,11 +16,13 @@ h1{
     flex-wrap:wrap;
     flex-direction: row;
     justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 25px;
 }
 
 .box{
     width: 33.33%;
-    border: 2px solid blue;
     text-align: center;
     margin: auto; 
 }
@@ -28,9 +30,13 @@ h1{
 #die{
     visibility: hidden;
     display: block;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.button {
+button {
     border-radius: 10%;
     padding-right: 20px;
     padding-left: 20px;
@@ -45,11 +51,19 @@ h1{
     color:#3e3f85;
 }
 
+.die p {
+
+    display:none;
+}
+
 #roll {
     display:none;
     font-size: 50px;
     background-color: #D62828;
     color:#3e3f85;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-left: 10%;
 }
 
 #hold{
@@ -57,6 +71,9 @@ h1{
     font-size: 50px;
     background-color: #5E60CE;
     color:white;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .winner {
@@ -65,4 +82,33 @@ h1{
 
 .holding {
     display: none;
+}
+
+@media only screen and (max-width: 768px){
+
+    .instructions {
+        font-size: 175%;
+    }
+
+    #die {
+        width: 85%;
+        height: 85%;
+    }
+
+    .box.buttons{
+        margin-top: 7%;
+    }
+
+    #roll {
+        font-size: 35px;
+    }
+
+    #new_game{
+        font-size: 30px;
+    }
+
+    #hold{
+        font-size: 30px;
+    }
+
 }
