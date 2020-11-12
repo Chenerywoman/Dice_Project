@@ -17,32 +17,31 @@
     <body>
         <h1>Dice Game: 2 players</h1>
         <div class="container">
-            <div class="box player1">
-                <h2>Player 1</h2>
-                <div class="score player1">Total: <span id="player1_score">0</span></div>
-                <div class="go player1">current roll: <span id="current_player1">0</span></div>
-                <!-- <div class= "holding player1">holding</div> -->
-                <div id="player1_holding">holding</div>
+            <div class="box" id="player1">
+                <h2>Player 1 
+                    <span class="winner">wins!</span>
+                    <span class="holding">holding...</span>
+                </h2>
+                <div class="score">Total: <span id="player1_score">0</span></div>
+                <div class="go">current roll: <span id="current_player1">0</span></div>
 
             </div>
             <div class="box die">
-                <button id="new_game">new game</button>
                 <img id="die" src="../img/dice6.png" alt="dice">
-                <button id="roll">roll die</button>
+                <button id="new_game">new game</button>
+                <button id="roll">roll</button>
                 <button id="hold">hold</button>
     
             </div>
-            <div class="box player2">
-                <h2>Player 2</h2>
-                <div class="score player2">Total: <span id="player2_score">0</span></div>
-                <div class="go player2">current roll: <span id="current_player2">0</span></div>
-                <!-- <div class="holding player2">holding</div> -->
-                <div id="player2_holding">holding</div>
-
+            <div class="box" id="player2">
+                <h2>Player 2 
+                    <span class="winner">wins!</span>
+                    <span class="holding">holding...</span>
+                </h2>
+                <div class="score">Total: <span id="player2_score">0</span></div>
+                <div class="go">current roll: <span id="current_player2">0</span></div>
             </div>
-        </div>
-        <div class="winner">The winner is player <span id="winning_player">?</span></div>
-        
+        </div>    
     </body>
     </html>
 

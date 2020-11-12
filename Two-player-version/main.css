@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #EAE2B7;
+    color: #3e3f85;
+}
+
 h1{
     text-align: center;
 }
@@ -20,27 +25,44 @@ h1{
     margin: auto; 
 }
 
-#player1_holding{
-    visibility: hidden;
-}
-
-#player2_holding{
-    visibility:hidden;
-}
-
 #die{
     visibility: hidden;
     display: block;
 }
 
-#roll{
+.button {
+    border-radius: 10%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #3e3f85;
+}
+
+#new_game {
+    font-size: 50px;
+    background-color: #FCBF49;
+    color:#3e3f85;
+}
+
+#roll {
     display:none;
+    font-size: 50px;
+    background-color: #D62828;
+    color:#3e3f85;
 }
 
 #hold{
     display:none;
+    font-size: 50px;
+    background-color: #5E60CE;
+    color:white;
 }
 
 .winner {
-    visibility: hidden;
+    display: none;
+}
+
+.holding {
+    display: none;
 }
