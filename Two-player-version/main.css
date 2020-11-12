@@ -10,30 +10,27 @@ h1{
     display:flex;
     flex-wrap:wrap;
     flex-direction: row;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 .box{
     width: 33.33%;
     border: 2px solid blue;
     text-align: center;
-    /* margin: auto; */
+    margin: auto; 
 }
 
-.holding.player1{
+#player1_holding{
     visibility: hidden;
 }
 
-.holding.player2{
+#player2_holding{
     visibility:hidden;
 }
 
-/* .display_block{
-    border: 1px solid red; 
-} */
-
 #die{
     visibility: hidden;
+    display: block;
 }
 
 #roll{
@@ -42,4 +39,8 @@ h1{
 
 #hold{
     display:none;
+}
+
+.winner {
+    visibility: hidden;
 }

@@ -21,26 +21,27 @@
                 <h2>Player 1</h2>
                 <div class="score player1">Total: <span id="player1_score">0</span></div>
                 <div class="go player1">current roll: <span id="current_player1">0</span></div>
-                <div class= "holding player1">holding</div>
+                <!-- <div class= "holding player1">holding</div> -->
+                <div id="player1_holding">holding</div>
 
             </div>
             <div class="box die">
-                <div class="display_block"><button id="new_game">new game</button></div>
+                <button id="new_game">new game</button>
+                <img id="die" src="../img/dice6.png" alt="dice">
                 <button id="roll">roll die</button>
                 <button id="hold">hold</button>
-                <div class="display_block"><img id="die" src="../img/dice6.png" alt="dice"></div>
-
-
+    
             </div>
             <div class="box player2">
                 <h2>Player 2</h2>
                 <div class="score player2">Total: <span id="player2_score">0</span></div>
                 <div class="go player2">current roll: <span id="current_player2">0</span></div>
-                <div class="holding player2">holding</div>
+                <!-- <div class="holding player2">holding</div> -->
+                <div id="player2_holding">holding</div>
 
             </div>
-
         </div>
+        <div class="winner">The winner is player <span id="winning_player">?</span></div>
         
     </body>
     </html>
