@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Dice Game: 2 players</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Game: 2 players</title>
+    </head>
+    <body>
+        <h1>Dice Game: 2 players</h1>
+        <div class="container">
+            <div class="box player1">
+                <h2>Player 1</h2>
+                <div class="score player1">Total: <span id="player1_score">0</span></div>
+                <div class="go player1">current roll: <span id="current_player1">0</span></div>
+                <div class= "holding player1">holding</div>
+
+            </div>
+            <div class="box die">
+                <div class="display_block"><button id="new_game">new game</button></div>
+                <button id="roll">roll die</button>
+                <button id="hold">hold</button>
+                <div class="display_block"><img id="die" src="../img/dice6.png" alt="dice"></div>
+
+
+            </div>
+            <div class="box player2">
+                <h2>Player 2</h2>
+                <div class="score player2">Total: <span id="player2_score">0</span></div>
+                <div class="go player2">current roll: <span id="current_player2">0</span></div>
+                <div class="holding player2">holding</div>
+
+            </div>
+
+        </div>
+        
+    </body>
+    </html>
+
+<script src="./script.js"></script>
+</body>
+</html>
