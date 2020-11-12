@@ -2,6 +2,7 @@ let new_game = document.getElementById("new_game");
 let roll = document.getElementById("roll");
 let hold = document.getElementById("hold");
 let die = document.getElementById("die");
+let rotating_die = document.getElementById("rotating_die");
 
 let totalPlayerOne = 0;
 let totalPlayerTwo = 0;
@@ -18,8 +19,9 @@ new_game.addEventListener("click", () => {
     roll.style.display = "inline";
     hold.style.display = "inline";
     new_game.style.display = "none";
-    die.style.visibility = "hidden";
-    die.style.display = "block";
+    rotating_die.style.display = "block";
+    die.style.display = "none";
+
     document.getElementsByClassName("die")[0].querySelector("p").style.display = "block";
 
     totalPlayerOne = 0;
@@ -41,7 +43,8 @@ roll.addEventListener("click", () => {
     console.log(go);
     console.log(`player ${currentPlayer} is playing`)
     die.src = `../img/dice${go}.png`
-    die.style.visibility = "visible";
+    die.style.display = "block";
+    rotating_die.style.display = "none";
 
     document.getElementsByClassName("die")[0].querySelector("p").style.display= "none";
 
@@ -87,12 +90,18 @@ roll.addEventListener("click", () => {
             roll.style.display = "none";
             hold.style.display = "none";
             new_game.style.display = "inline";
+            rotating_die.style.display = "block";
+            die.style.display = "none";
+    
 
         } else if (totalPlayerOne >= 20) {
             document.getElementById("player1").querySelector(".winner").style.display = "inline";
             roll.style.display = "none";
             hold.style.display = "none";
             new_game.style.display = "inline";
+            rotating_die.style.display = "block";
+            die.style.display = "none";
+           
         }
 
         currentPlayer = 2;
@@ -112,12 +121,17 @@ roll.addEventListener("click", () => {
             roll.style.display = "none";
             hold.style.display = "none";
             new_game.style.display = "inline";
+            rotating_die.style.display = "block";
+            die.style.display = "none";
+           
 
         } else if (totalPlayerTwo >= 20) {
             document.getElementById("player2").querySelector(".winner").style.display = "inline";
             roll.style.display = "none";
             hold.style.display = "none";
             new_game.style.display = "inline";
+            rotating_die.style.display = "block";
+            die.style.display = "none";
         }
 
         currentPlayer = 1;

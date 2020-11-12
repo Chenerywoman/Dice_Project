@@ -28,13 +28,28 @@ h1{
 }
 
 #die{
-    visibility: hidden;
-    display: block;
+    display: none;
     margin-top: 10%;
     margin-bottom: 15%;
     margin-left: auto;
     margin-right: auto;
 }
+
+#rotating_die{
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    filter: hue-rotate(170deg)
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 button {
     border-radius: 10%;
@@ -84,6 +99,7 @@ button {
     display: none;
 }
 
+
 @media only screen and (max-width: 768px){
 
     .instructions {
@@ -93,6 +109,15 @@ button {
     #die {
         width: 85%;
         height: 85%;
+        margin-top: 15%;
+        margin-bottom: 20%;
+    }
+
+    #rotating_die {
+        width: 85%;
+        height: 85%;
+        margin-top: 15%;
+        margin-bottom: 20%;
     }
 
     .box.buttons{
