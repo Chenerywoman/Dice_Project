@@ -11,6 +11,7 @@ roll.addEventListener("click", () => {
 
     document.getElementById("die").src = `../img/dice${go}.png`
     document.getElementById("die").style.display = "block";
+    document.getElementById("die").style.visibility = "visible";
 
     totalScore = totalScore + go;
     document.getElementById("score").textContent = totalScore;
@@ -19,13 +20,13 @@ roll.addEventListener("click", () => {
 
         document.getElementById("message").textContent = "Rolled 1. You lose!";
         document.getElementById("roll").style.display  = "none";
-        document.getElementById("replay").style.display = "block";
+        document.getElementById("replay").style.display = "inline";
     
     } else if (totalScore >= 20) {
 
         document.getElementById("message").textContent = "You win!";
         document.getElementById("roll").style.display  = "none";
-        document.getElementById("replay").style.display = "block";
+        document.getElementById("replay").style.display = "inline";
     
     } else {
     
@@ -38,16 +39,12 @@ replay.addEventListener("click", () =>{
     
     totalScore = 0;
     document.getElementById("score").innerHTML = `${totalScore}`
-    document.getElementById("roll").style.display = "block";
+    document.getElementById("roll").style.display = "inline";
     document.getElementById("message").innerHTML = "Roll the die to play."
-    document.getElementById("die").style.display = "none";
+    document.getElementById("die").style.visibility = "hidden";
     document.getElementById("replay").style.display = "none";
 
 })
 
 
-
-
-// image hidden to start with 
-// need to link random number to dice image
 
