@@ -42,7 +42,7 @@ roll.addEventListener("click", () => {
 
     die.src = `../img/dice${go}.png`
     die.style.display = "block";
-    die.style.visibility = "visible";
+    rotating_die.style.display = "none";
 
     totalScore = totalScore + go;
     score.textContent = totalScore;
@@ -52,12 +52,16 @@ roll.addEventListener("click", () => {
         message.textContent = "Rolled 1. You lose!";
         roll.style.display  = "none";
         replay.style.display = "inline";
+        die.style.display = "none";
+        rotating_die.style.display = "block";
     
     } else if (totalScore >= 20) {
 
         message.textContent = "You win!";
         roll.style.display  = "none";
         replay.style.display = "inline";
+        die.style.display = "none";
+        rotating_die.style.display = "block";
     
     } else {
     
@@ -72,7 +76,6 @@ replay.addEventListener("click", () =>{
     score.innerHTML = `${totalScore}`
     roll.style.display = "inline";
     message.innerHTML = "Roll the die to play."
-    die.style.visibility = "hidden";
     replay.style.display = "none";
 
 })

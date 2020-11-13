@@ -23,7 +23,11 @@ body {
 }
 
 .box.buttons{
-    margin-top: 10%;
+    margin-top: 5%;
+}
+
+.box{
+    border: 2px solid black;
 }
 
 button {
@@ -51,8 +55,24 @@ button:active{
 
 
 #die {
-    visibility: hidden;
+    display:none;
 }
+
+#rotating_die{
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    filter: hue-rotate(170deg)
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 #replay{
     display: none;
@@ -68,16 +88,21 @@ button:active{
 @media only screen and (max-width: 768px){
 
     .instructions {
-        font-size: 175%;
+        font-size: 150%;
     }
 
     #die {
+        width: 80%;
+        height: 80%;
+    }
+
+    #rotating_die {
         width: 85%;
         height: 85%;
     }
 
     .box.buttons{
-        margin-top: 7%;
+        margin-top: 3%;
     }
 
     #roll {
@@ -102,8 +127,13 @@ button:active{
         height: 80%;
     }
 
+    #rotating_die {
+        width: 80%;
+        height: 80%;
+    }
+
     .box.buttons{
-        margin-top: 25%;
+        margin-top: 15%;
     }
 
     #roll {
