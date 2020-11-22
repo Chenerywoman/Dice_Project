@@ -9,38 +9,48 @@ body {
 
 h1{
     text-align: center;
+    font-size: 50px;
+    font-family: 'Goldman', cursive;
+    color: blue;
 }
 
-.container{
+h2 {
+    font-family: 'Goldman', cursive;
+    color: blue;
+}
+
+.container {
     display:flex;
     flex-wrap:wrap;
     flex-direction: row;
     justify-content: center;
-    margin-left: 15%;
-    margin-right: 15%;
+    align-items: center;
+    height: 80vh;
     font-size: 25px;
+    border: 2px solid green;
 }
 
 .box{
     width: 33.33%;
     text-align: center;
-    margin: auto; 
+    border: 1px solid blue;
+    font-family: 'Goldman', cursive;
+}
+
+.box.rules {
+    width: 85%;
+    margin-bottom: 2%;
 }
 
 #die{
     display: none;
-    margin-top: 10%;
-    margin-bottom: 15%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 #rotating_die{
     animation-name: spin;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    margin-top: 10%;
-    margin-bottom: 15%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -51,6 +61,43 @@ h1{
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
+.box.turn {
+    display: none;
+    font-size: 40px;
+    width: 100%;
+    color: blue;
+}
+
+.box.turn .roll{
+    color: #5E60CE;
+}
+
+.box.turn .rolled{
+    display: none;
+}
+
+#new_game {
+    font-size: 50px;
+    background-color: #FCBF49;
+    color:#3e3f85;
+    font-family: 'Goldman', cursive;
+}
+
+.winner {
+    display: none;
+    color: darkred;
+}
+
+.holding {
+    display: none;
+    color: darkmagenta;
+}
+
+.box.buttons {
+    margin-top: 1%;
+    width: 100%;
+}
+
 button {
     border-radius: 10%;
     padding-right: 20px;
@@ -60,43 +107,20 @@ button {
     border: 1px solid #3e3f85;
 }
 
-#new_game {
-    font-size: 50px;
-    background-color: #FCBF49;
-    color:#3e3f85;
-}
-
-.die p {
-
-    display:none;
-}
-
 #roll {
     display:none;
+    font-family: 'Goldman', cursive;
     font-size: 50px;
     background-color: #D62828;
     color:#3e3f85;
-    margin-right: 10%;
-    margin-top: 5%;
-    margin-left: 10%;
 }
 
 #hold{
     display:none;
+    font-family: 'Goldman', cursive;
     font-size: 50px;
     background-color: #5E60CE;
     color:white;
-    margin-top: 5%;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-.winner {
-    display: none;
-}
-
-.holding {
-    display: none;
 }
 
 
@@ -109,19 +133,19 @@ button {
     #die {
         width: 85%;
         height: 85%;
-        margin-top: 15%;
-        margin-bottom: 20%;
+        /* margin-top: 15%;
+        margin-bottom: 20%; */
     }
 
     #rotating_die {
         width: 85%;
         height: 85%;
-        margin-top: 15%;
-        margin-bottom: 20%;
+        /* margin-top: 15%;
+        margin-bottom: 20%; */
     }
 
     .box.buttons{
-        margin-top: 7%;
+       width: 100%;
     }
 
     #roll {

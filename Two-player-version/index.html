@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
     <title>Dice Game: 2 players</title>
 </head>
@@ -17,31 +19,48 @@
     <body>
         <h1>Dice Game: 2 players</h1>
         <div class="container">
+            <div class=" box rules">
+                Each player takes it in turns to roll the die.  The number on the die is added to the player's score.  If a player rolls a 1, they lose the game and the other player wins.  If a player wishes, they can choose to miss a go by clicking the 'hold' button.  The winner is the first player to reach a score of 20. The winner of the previous game starts the next game.
+            </div>
             <div class="box" id="player1">
                 <h2>Player 1 
                     <span class="winner">wins!</span>
                     <span class="holding">holding...</span>
                 </h2>
-                <div class="score">Total: <span id="player1_score">0</span></div>
-                <div class="go">current roll: <span id="current_player1">0</span></div>
-
+                <div class="go">rolled: <span id="current_player1"></span></div>
+                <br>
+                <div class="score">total: <span id="player1_score">0</span></div>
             </div>
+
             <div class="box die">
                 <img id="die" src="../img/dice6.png" alt="dice">
                 <img id="rotating_die" src="../img/dice3.png" alt="rotating_dice">
-                <p>Roll the dice...</p>
-                <button id="new_game">play</button>
-                <button id="roll">roll</button>
-                <button id="hold">hold</button>
-    
             </div>
+
             <div class="box" id="player2">
                 <h2>Player 2 
                     <span class="winner">wins!</span>
                     <span class="holding">holding...</span>
                 </h2>
-                <div class="score">Total: <span id="player2_score">0</span></div>
-                <div class="go">current roll: <span id="current_player2">0</span></div>
+                <div class="go">rolled: <span id="current_player2"></span></div>
+                <br>
+                <div class="score">total: <span id="player2_score">0</span></div>
+            </div>
+            
+            <div class="box turn">
+                Player <span>X</span>:. 
+                <span class="roll">
+                    roll the dice.
+                </span>
+                <span class="rolled">
+                    rolled <span class="scored">?</span>
+                </span>
+            </div>
+
+            <div class="box buttons">
+                <button id="new_game">play</button>
+                <button id="roll">roll</button>
+                <button id="hold">hold</button>
             </div>
         </div>    
     </body>
