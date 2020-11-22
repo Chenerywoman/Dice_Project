@@ -27,13 +27,11 @@ h2 {
     align-items: center;
     height: 80vh;
     font-size: 25px;
-    border: 2px solid green;
 }
 
 .box{
     width: 33.33%;
     text-align: center;
-    border: 1px solid blue;
     font-family: 'Goldman', cursive;
 }
 
@@ -133,15 +131,11 @@ button {
     #die {
         width: 85%;
         height: 85%;
-        /* margin-top: 15%;
-        margin-bottom: 20%; */
     }
 
     #rotating_die {
         width: 85%;
         height: 85%;
-        /* margin-top: 15%;
-        margin-bottom: 20%; */
     }
 
     .box.buttons{
@@ -159,5 +153,42 @@ button {
     #hold{
         font-size: 30px;
     }
+
+}
+
+@media only screen and (max-width: 768px){
+
+    h1{
+        font-size: 25px;
+    }
+
+    .box.rules {
+        display: none;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .go, .score {
+        font-size: 20px;
+    }
+
+    .box.turn {
+        font-size: 25px;
+    }
+
+    #roll {
+        font-size: 20px;
+    }
+
+    #new_game{
+        font-size: 20px;
+    }
+
+    #hold{
+        font-size: 20px;
+    }
+    
 
 }
